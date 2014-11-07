@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.atlassian.bamboo.sample</groupId>
+  <artifactId>maven_selenium</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Sample Bamboo-Maven test</name>
+  <description>Sample project to show integration of Bamboo with Maven and Selenium test</description>
+  <organization>
+    <name>Atlassian Software Systems Pty Ltd</name>
+    <url>http://www.atlassian.com/</url>
+  </organization>
+  <scm>
+    <connection>scm:git:https://bitbucket.org/chystoprudov/selenium_bamboo.git</connection>
+    <developerConnection>scm:git:ssh://git@bitbucket.org/chystoprudov/selenium_bamboo.git</developerConnection>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>2.44.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
