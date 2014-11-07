@@ -11,20 +11,20 @@ import static org.junit.Assert.assertEquals;
 
 public class BambooTest
 {
+    public static final By TRY_LINK = By.xpath("//div[@id='mainNav']/ul/li/a[contains(@href, 'try')]");
     private WebDriver driver;
 
     @Before
     public void setUp() throws MalformedURLException
     {
         driver = new HtmlUnitDriver(false);
+        driver.get("https://www.atlassian.com/");
     }
 
     @Test
     public void testGoogle()
     {
-        driver.get("https://www.atlassian.com/");
-        WebElement tryLink = driver.findElement(By.xpath("//div[@id='mainNav']/ul/li/a[contains(@href, 'try')]"));
-
-        assertEquals("It looks Try link has wrong label", "Try", tryLink.getText());
+        WebElement tryLink = driver.findElement(TRY_LINK);
+        assertEquals("'Try' link has wrong label", "Try", tryLink.getText());
     }
 }
